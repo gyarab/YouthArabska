@@ -52,16 +52,17 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-saturate-150 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md backdrop-saturate-150 ${
           scrolled
-            ? 'bg-[#0f1426]/98 border-b border-white/15 shadow-[0_16px_50px_rgba(3,7,18,0.38)] py-3 lg:py-4 backdrop-blur-3xl'
-            : 'bg-[#0f1426]/95 border-b border-white/10 shadow-[0_12px_38px_rgba(3,7,18,0.22)] py-4 lg:py-6 backdrop-blur-2xl'
+            ? 'bg-milk/90 border-b border-ink/10 shadow-[0_12px_40px_-18px_rgba(38,34,52,0.25)]'
+            : 'bg-milk/80 border-b border-ink/[0.06] shadow-[0_8px_30px_-20px_rgba(38,34,52,0.18)]'
         }`}
+        style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between transition-all duration-300 ${scrolled ? 'py-3 lg:py-4' : 'py-4 lg:py-6'}`}>
           {location.pathname === '/' ? (
             <span className="flex items-center">
-              <span className="text-white font-serif font-bold text-2xl lg:text-3xl tracking-wide">
+              <span className="text-ink font-serif font-bold text-2xl lg:text-3xl tracking-wide">
                 {t('common.brand_youth')}
               </span>
               <span className="text-gradient font-serif font-bold text-2xl lg:text-3xl tracking-wide ml-1.5">
@@ -74,7 +75,7 @@ export default function Header() {
               className="flex items-center group" 
               aria-label={t('common.nav.home')}
             >
-              <span className="text-white font-serif font-bold text-2xl lg:text-3xl tracking-wide transition-transform group-hover:scale-105">
+              <span className="text-ink font-serif font-bold text-2xl lg:text-3xl tracking-wide transition-transform group-hover:scale-105">
                 {t('common.brand_youth')}
               </span>
               <span className="text-gradient font-serif font-bold text-2xl lg:text-3xl tracking-wide ml-1.5 transition-transform group-hover:scale-105">
@@ -84,7 +85,7 @@ export default function Header() {
           )}
 
           <button
-            className="md:hidden relative w-11 h-11 flex items-center justify-center rounded-xl bg-white/[0.04] hover:bg-white/[0.08] active:bg-white/[0.12] border border-white/10 hover:border-white/20 transition-colors duration-200 z-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-dawn-gold/60"
+            className="md:hidden relative w-11 h-11 flex items-center justify-center rounded-xl bg-ink/[0.04] hover:bg-ink/[0.08] active:bg-ink/[0.12] border border-ink/10 hover:border-ink/20 transition-colors duration-200 z-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
             onClick={() => setNavOpen((v) => !v)}
             aria-expanded={navOpen}
             aria-controls="main-navigation"
@@ -96,7 +97,7 @@ export default function Header() {
             <span className="relative block w-[18px] h-[14px]" aria-hidden="true">
               {/* Top bar */}
               <span
-                className={`absolute left-0 right-0 h-[1.75px] rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.18)] transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] ${
+                className={`absolute left-0 right-0 h-[1.75px] rounded-full bg-ink transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] ${
                   navOpen
                     ? 'top-1/2 -translate-y-1/2 rotate-45'
                     : 'top-0'
@@ -104,13 +105,13 @@ export default function Header() {
               />
               {/* Middle bar — fades + collapses horizontally on open */}
               <span
-                className={`absolute left-0 right-0 h-[1.75px] top-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.18)] origin-center transition-all duration-200 ease-out ${
+                className={`absolute left-0 right-0 h-[1.75px] top-1/2 -translate-y-1/2 rounded-full bg-ink origin-center transition-all duration-200 ease-out ${
                   navOpen ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'
                 }`}
               />
               {/* Bottom bar */}
               <span
-                className={`absolute left-0 right-0 h-[1.75px] rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.18)] transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] ${
+                className={`absolute left-0 right-0 h-[1.75px] rounded-full bg-ink transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] ${
                   navOpen
                     ? 'bottom-1/2 translate-y-1/2 -rotate-45'
                     : 'bottom-0'
@@ -127,7 +128,7 @@ export default function Header() {
                     to={link.to}
                     onClick={(e) => handleNavLinkClick(e, link.to, link.scrollId)}
                     className={`transition-all duration-200 text-sm lg:text-base font-medium tracking-wide ${
-                      location.pathname === link.to ? 'text-dawn-gold drop-shadow-[0_0_8px_rgba(255,215,0,0.5)]' : 'text-white/70 hover:text-white hover:-translate-y-0.5'
+                      location.pathname === link.to ? 'text-accent' : 'text-ink/65 hover:text-ink hover:-translate-y-0.5'
                     }`}
                   >
                     {link.label}
@@ -140,7 +141,7 @@ export default function Header() {
               <a
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); window.location.href = 'mai' + 'lto:' + 'serhii.khudanych.s' + '@' + 'gyarab.cz' }}
-                className="px-5 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-all duration-200 text-sm lg:text-base font-medium border border-white/20"
+                className="px-5 py-2.5 rounded-lg bg-ink/[0.05] hover:bg-ink/[0.09] text-ink transition-all duration-200 text-sm lg:text-base font-medium border border-ink/15"
               >
                 {t('common.contact', 'Napište nám')}
               </a>
@@ -148,7 +149,7 @@ export default function Header() {
                 href="https://www.instagram.com/youtharabska/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/70 hover:text-dawn-gold transition-all duration-200"
+                className="p-2 rounded-lg bg-ink/[0.04] hover:bg-ink/[0.08] text-ink/60 hover:text-accent transition-all duration-200"
                 aria-label="Instagram"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -163,7 +164,7 @@ export default function Header() {
       </header>
 
       <div
-        className={`fixed inset-0 bg-slate-950/60 backdrop-blur-md z-40 md:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-ink/30 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300 ${
           navOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         onClick={() => setNavOpen(false)}
@@ -171,15 +172,15 @@ export default function Header() {
 
       <aside
         id="main-navigation"
-        className={`fixed top-0 right-0 bottom-0 w-[min(100vw,22rem)] bg-[linear-gradient(180deg,rgba(15,20,38,0.98),rgba(10,15,30,0.96))] backdrop-blur-2xl border-l border-white/10 shadow-[0_0_60px_rgba(3,7,18,0.55)] z-50 md:hidden transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0.18,1)] ${
+        className={`fixed top-0 right-0 bottom-0 w-[min(100vw,22rem)] bg-milk/95 backdrop-blur-md border-l border-ink/10 shadow-[0_0_60px_rgba(38,34,52,0.18)] z-50 md:hidden transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0.18,1)] ${
           navOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         {/* Top hairline gradient accent */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-dawn-gold/70 to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent pointer-events-none" />
 
         {/* Subtle radial glow in upper-right corner */}
-        <div className="absolute -top-20 -right-20 w-48 h-48 bg-dawn-gold/[0.04] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-20 -right-20 w-48 h-48 bg-accent/[0.06] rounded-full blur-3xl pointer-events-none" />
 
         <div
           className="flex flex-col h-full overflow-y-auto px-5 pb-5"
@@ -189,17 +190,17 @@ export default function Header() {
           }}
         >
           {/* Brand + close */}
-          <div className="flex items-center justify-between gap-4 mb-7 pb-4 border-b border-white/[0.07]">
+          <div className="flex items-center justify-between gap-4 mb-7 pb-4 border-b border-ink/[0.08]">
             <div className="min-w-0 flex items-center gap-3">
-              <span className="w-4 h-px bg-dawn-gold/60 shrink-0" aria-hidden="true" />
+              <span className="w-4 h-px bg-accent/60 shrink-0" aria-hidden="true" />
               <div className="font-serif text-lg sm:text-xl font-bold tracking-wide leading-none truncate">
-                <span className="text-white">{t('common.brand_youth')}</span>
+                <span className="text-ink">{t('common.brand_youth')}</span>
                 <span className="text-gradient ml-1.5">{t('common.brand_arabska')}</span>
               </div>
             </div>
 
             <button
-              className="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 text-white/70 hover:text-white transition-colors"
+              className="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-full bg-ink/[0.06] hover:bg-ink/[0.12] border border-ink/10 text-ink/70 hover:text-ink transition-colors"
               onClick={() => setNavOpen(false)}
               aria-label={t('common.nav.close', 'Zavřít menu')}
             >
@@ -212,11 +213,11 @@ export default function Header() {
 
           {/* Section label: navigation */}
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px flex-1 bg-white/10" />
-            <span className="text-white/35 text-[10px] font-semibold tracking-[0.3em] uppercase">
+            <div className="h-px flex-1 bg-ink/10" />
+            <span className="text-ink/45 text-[10px] font-semibold tracking-[0.3em] uppercase">
               {t('common.nav.section_navigate', 'Navigace')}
             </span>
-            <div className="h-px flex-1 bg-white/10" />
+            <div className="h-px flex-1 bg-ink/10" />
           </div>
 
           {/* Nav links */}
@@ -236,8 +237,8 @@ export default function Header() {
                     onClick={(e) => handleNavLinkClick(e, link.to, link.scrollId)}
                     className={`group flex items-center justify-between py-3.5 px-4 rounded-xl transition-all duration-200 text-[15px] font-medium tracking-wide border-l-2 ${
                       isActive
-                        ? 'bg-gradient-to-r from-dawn-gold/15 via-dawn-gold/5 to-transparent text-dawn-gold border-dawn-gold'
-                        : 'text-white/75 hover:text-white hover:bg-white/[0.04] border-transparent hover:border-white/20'
+                        ? 'bg-gradient-to-r from-accent/12 via-accent/5 to-transparent text-accent border-accent'
+                        : 'text-ink/75 hover:text-ink hover:bg-ink/[0.04] border-transparent hover:border-ink/20'
                     }`}
                   >
                     <span>{link.label}</span>
@@ -268,11 +269,11 @@ export default function Header() {
           {/* Section label: connect */}
           <div className="mt-auto">
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-px flex-1 bg-white/10" />
-              <span className="text-white/35 text-[10px] font-semibold tracking-[0.3em] uppercase">
+              <div className="h-px flex-1 bg-ink/10" />
+              <span className="text-ink/45 text-[10px] font-semibold tracking-[0.3em] uppercase">
                 {t('common.nav.section_connect', 'Spojení')}
               </span>
-              <div className="h-px flex-1 bg-white/10" />
+              <div className="h-px flex-1 bg-ink/10" />
             </div>
 
             <div
@@ -284,13 +285,13 @@ export default function Header() {
               <a
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); window.location.href = 'mai' + 'lto:' + 'serhii.khudanych.s' + '@' + 'gyarab.cz' }}
-                className="group flex flex-col items-center justify-center gap-1.5 py-4 px-3 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-dawn-gold/40 transition-all duration-200"
+                className="group flex flex-col items-center justify-center gap-1.5 py-4 px-3 rounded-2xl bg-ink/[0.04] hover:bg-ink/[0.08] border border-ink/10 hover:border-accent/40 transition-all duration-200"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-dawn-gold/80 group-hover:text-dawn-gold transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-accent/80 group-hover:text-accent transition-colors">
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
-                <span className="text-white/85 group-hover:text-white text-[12px] font-medium tracking-wide transition-colors">
+                <span className="text-ink/85 group-hover:text-ink text-[12px] font-medium tracking-wide transition-colors">
                   {t('common.contact', 'Napište nám')}
                 </span>
               </a>
@@ -298,20 +299,20 @@ export default function Header() {
                 href="https://www.instagram.com/youtharabska/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center justify-center gap-1.5 py-4 px-3 rounded-2xl bg-gradient-to-br from-amber-400/[0.08] via-rose-400/[0.08] to-sky-400/[0.08] hover:from-amber-400/20 hover:via-rose-400/15 hover:to-sky-400/20 border border-white/10 hover:border-white/25 transition-all duration-200"
+                className="group flex flex-col items-center justify-center gap-1.5 py-4 px-3 rounded-2xl bg-gradient-to-br from-amber-400/[0.12] via-rose-400/[0.12] to-sky-400/[0.12] hover:from-amber-400/25 hover:via-rose-400/20 hover:to-sky-400/25 border border-ink/10 hover:border-ink/20 transition-all duration-200"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 group-hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-ink/80 group-hover:text-ink transition-colors">
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                   <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                 </svg>
-                <span className="text-white/85 group-hover:text-white text-[12px] font-medium tracking-wide transition-colors">
+                <span className="text-ink/85 group-hover:text-ink text-[12px] font-medium tracking-wide transition-colors">
                   Instagram
                 </span>
               </a>
             </div>
 
-            <p className="text-center text-[10px] text-white/30 tracking-[0.2em] uppercase">
+            <p className="text-center text-[10px] text-ink/45 tracking-[0.2em] uppercase">
               © {new Date().getFullYear()} · Youth Arabská
             </p>
           </div>

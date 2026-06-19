@@ -1,11 +1,13 @@
 import SEO from '../components/SEO'
 import PhotoGrid from '../components/PhotoGrid'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import useReveal from '../hooks/useReveal'
 
 export default function GalleryPage() {
   const { t } = useTranslation()
-  const ref = useReveal()
+  const heroRef = useReveal()
+  const ctaRef = useReveal()
 
   return (
     <>
@@ -20,18 +22,18 @@ export default function GalleryPage() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-start px-4 sm:px-8 py-32 overflow-hidden bg-transparent mt-16 md:mt-0">
         <div className="max-w-7xl mx-auto w-full relative z-20">
-          <div ref={ref} className="max-w-4xl reveal-enter">
+          <div ref={heroRef} className="max-w-4xl reveal-enter">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-12 h-px bg-dawn-gold/60" />
-              <span className="text-dawn-gold/80 font-semibold tracking-widest uppercase text-xs">
+              <div className="w-12 h-px bg-accent/60" />
+              <span className="text-accent font-semibold tracking-widest uppercase text-xs">
                 Vizuální příběh
               </span>
             </div>
-            <h1 className="font-serif text-4xl md:text-6xl font-bold leading-tight mb-6">
+            <h1 className="font-serif text-4xl md:text-6xl font-bold leading-tight mb-6 text-ink">
               Galerie naší <br />
               <span className="text-gradient">komunity</span>
             </h1>
-            <p className="text-white/70 text-base md:text-lg leading-relaxed max-w-2xl mb-4">
+            <p className="text-ink/70 text-base md:text-lg leading-relaxed max-w-2xl mb-4">
               Fotografie, videa a momentky, které zachycují energii Youth Arabské. Vidět můžeš atmosféru našich akcí, inspirativní setkání a komunitu, která se neustále učí a roste.
             </p>
           </div>
@@ -44,11 +46,11 @@ export default function GalleryPage() {
       {/* Call to Action Section */}
       <section className="relative py-20 px-4 sm:px-8 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
-          <div ref={ref} className="reveal-enter">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
+          <div ref={ctaRef} className="reveal-enter">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-ink">
               Chcete být součástí příběhu?
             </h2>
-            <p className="text-white/60 text-lg mb-8">
+            <p className="text-ink/65 text-lg mb-8">
               Připoj se k Youth Arabské a staň se součástí komunity, kde se dějí věci. Fotografie a videa z tvých příspěvků by mohly inspirovat další studenty.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -65,12 +67,12 @@ export default function GalleryPage() {
                 </svg>
                 Sleduj nás na Instagramu
               </a>
-              <a
-                href="/get-involved"
-                className="px-8 py-4 rounded-xl border border-white/30 text-white/80 hover:bg-white/10 transition-all duration-200 font-semibold text-base text-center"
+              <Link
+                to="/get-involved"
+                className="px-8 py-4 rounded-xl border border-ink/20 text-ink/80 hover:bg-ink/[0.05] hover:text-ink transition-all duration-200 font-semibold text-base text-center"
               >
                 Připoj se k nám
-              </a>
+              </Link>
             </div>
           </div>
         </div>

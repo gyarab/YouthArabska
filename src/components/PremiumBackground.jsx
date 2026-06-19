@@ -1,89 +1,30 @@
 /**
- * PremiumBackground
+ * PremiumBackground (light "milk" theme)
  *
- * Static, GPU-cheap, premium "aurora" background:
- *  - Deep navy → purple radial base
- *  - Three large soft color glows (gold / coral / violet) at low opacity
- *  - Very fine SVG noise grain for a tactile, expensive feel
- *  - A vignette to focus the eye on the content
+ * A static, GPU-cheap milk-white backdrop with very soft warm color
+ * washes baked directly into a multi-stop CSS radial-gradient.
  *
- * No JS, no animation loops, no canvas — renders once and is static.
- * This avoids the lag the kinetic canvas/particle background caused on
- * lower-end devices, while keeping the dawn color identity of the site.
+ * Performance note: the previous version stacked three 600–820px <div>s
+ * each with `filter: blur(120–160px)` plus an SVG grain layer and a
+ * vignette. Large blur filters force the browser to allocate big
+ * offscreen layers and re-composite them on every scroll/paint — a real
+ * jank source on phones. Here there is no `filter`, no animation and no
+ * extra layers: just one painted gradient that the GPU handles trivially.
  */
 export default function PremiumBackground() {
   return (
     <div
-      className="fixed inset-0 z-0 pointer-events-none overflow-hidden"
+      className="fixed inset-0 z-0 pointer-events-none"
       aria-hidden="true"
-    >
-      {/* Deep base gradient */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(ellipse at 50% -10%, #1a0f2e 0%, #0c1124 45%, #070a17 100%)',
-        }}
-      />
-
-      {/* Aurora glow — gold (top-left) */}
-      <div
-        className="absolute -top-32 -left-32 w-[640px] h-[640px] rounded-full"
-        style={{
-          background: '#FFD700',
-          opacity: 0.07,
-          filter: 'blur(120px)',
-        }}
-      />
-
-      {/* Aurora glow — coral (right) */}
-      <div
-        className="absolute top-[28%] -right-40 w-[720px] h-[720px] rounded-full"
-        style={{
-          background: '#FF7E5F',
-          opacity: 0.06,
-          filter: 'blur(140px)',
-        }}
-      />
-
-      {/* Aurora glow — violet (bottom-left) */}
-      <div
-        className="absolute -bottom-48 left-[15%] w-[820px] h-[820px] rounded-full"
-        style={{
-          background: '#C779D0',
-          opacity: 0.05,
-          filter: 'blur(160px)',
-        }}
-      />
-
-      {/* Subtle horizontal sheen near the top — adds depth without movement */}
-      <div
-        className="absolute inset-x-0 top-0 h-[420px]"
-        style={{
-          background:
-            'linear-gradient(180deg, rgba(255,255,255,0.035) 0%, transparent 100%)',
-        }}
-      />
-
-      {/* Fine grain — tactile premium texture, no animation */}
-      <div
-        className="absolute inset-0 mix-blend-overlay"
-        style={{
-          opacity: 0.05,
-          backgroundImage:
-            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.55'/></svg>\")",
-          backgroundSize: '240px 240px',
-        }}
-      />
-
-      {/* Vignette — focuses content, deepens edges */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(ellipse at center, transparent 55%, rgba(7,10,23,0.85) 100%)',
-        }}
-      />
-    </div>
+      style={{
+        background: [
+          'radial-gradient(1100px circle at 12% -8%, rgba(255, 204, 71, 0.16), transparent 46%)',
+          'radial-gradient(1000px circle at 100% 8%, rgba(255, 126, 95, 0.12), transparent 44%)',
+          'radial-gradient(1000px circle at -5% 100%, rgba(199, 121, 208, 0.12), transparent 46%)',
+          'radial-gradient(900px circle at 95% 100%, rgba(255, 204, 71, 0.10), transparent 48%)',
+          '#FBF9F4',
+        ].join(', '),
+      }}
+    />
   )
 }

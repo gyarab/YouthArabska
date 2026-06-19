@@ -16,7 +16,7 @@ const GalleryPage = lazy(() => import('./pages/GalleryPage'))
 function LoadingSpinner() {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="w-12 h-12 border-4 border-dawn-gold/20 border-t-dawn-gold rounded-full animate-spin" />
+      <div className="w-12 h-12 border-4 border-accent/20 border-t-accent rounded-full animate-spin" />
     </div>
   )
 }
@@ -24,8 +24,8 @@ function LoadingSpinner() {
 function NotFound() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 text-center">
-      <h1 className="font-serif text-5xl md:text-7xl font-bold text-white mb-4">404</h1>
-      <p className="text-white/60 text-lg mb-8">Stránka nebyla nalezena</p>
+      <h1 className="font-serif text-5xl md:text-7xl font-bold text-ink mb-4">404</h1>
+      <p className="text-ink/65 text-lg mb-8">Stránka nebyla nalezena</p>
       <Link to="/" className="btn-glow-gold px-6 py-3 rounded-xl bg-gradient-to-r from-dawn-gold to-dawn-orange text-black font-bold hover:scale-[1.02] transition-all duration-300">
         Zpět na hlavní stránku
       </Link>

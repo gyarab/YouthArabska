@@ -10,17 +10,17 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="relative py-8 sm:py-12 px-4 border-t border-white/5">
+    <footer className="relative py-8 sm:py-12 px-4 border-t border-ink/[0.08]">
       <div className="max-w-7xl mx-auto">
-        <div className="glass-card p-6 sm:p-8 md:p-12 rounded-2xl bg-black/40 backdrop-blur-md">
+        <div className="glass-card p-6 sm:p-8 md:p-12 rounded-2xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-8">
             
             <div className="sm:col-span-2">
               <span className="flex items-center mb-4 flex-wrap">
-                <span className="text-white font-serif font-bold text-xl sm:text-2xl tracking-wide">{t('common.brand_youth')}</span>
+                <span className="text-ink font-serif font-bold text-xl sm:text-2xl tracking-wide">{t('common.brand_youth')}</span>
                 <span className="text-gradient font-serif font-bold text-xl sm:text-2xl tracking-wide ml-1.5">{t('common.brand_arabska')}</span>
               </span>
-              <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-md">
+              <p className="text-ink/65 text-sm leading-relaxed mb-6 max-w-md">
                 {t('footer.description')}
               </p>
               
@@ -30,13 +30,16 @@ export default function Footer() {
                     key={email.user}
                     href="#contact"
                     onClick={(e) => { e.preventDefault(); window.location.href = 'mai' + 'lto:' + email.user + '@' + email.domain }}
-                    className="text-white/70 hover:text-white transition-colors duration-200 flex items-start gap-2 text-xs sm:text-sm bg-white/5 px-3 sm:px-4 py-2 rounded-lg hover:bg-white/10 w-fit"
+                    className="text-ink/70 hover:text-ink transition-colors duration-200 flex items-start gap-2 text-xs sm:text-sm bg-ink/[0.04] px-3 sm:px-4 py-2 rounded-lg hover:bg-ink/[0.08] w-fit"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 text-accent/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <rect width="20" height="16" x="2" y="4" rx="2"/>
                       <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                     </svg>
-                    <span className="break-all">{email.user + '@' + email.domain}</span>
+                    <span className="flex flex-col">
+                      <span className="font-medium text-ink/85">{email.label}</span>
+                      <span className="break-all text-ink/55">{email.user + '@' + email.domain}</span>
+                    </span>
                   </a>
                 ))}
               </div>
@@ -45,12 +48,12 @@ export default function Footer() {
               href="https://www.instagram.com/youtharabska/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white/70 hover:text-white transition-colors duration-200 px-3 sm:px-4 py-2 flex items-center gap-2 text-xs sm:text-sm bg-white/5 rounded-lg hover:bg-white/10 w-fit self-start"
+              className="text-ink/70 hover:text-ink transition-colors duration-200 px-3 sm:px-4 py-2 flex items-center gap-2 text-xs sm:text-sm bg-ink/[0.04] rounded-lg hover:bg-ink/[0.08] w-fit self-start"
               aria-label="Instagram"
             >
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
-                className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" 
+                className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 text-accent/80" 
                 viewBox="0 0 24 24" 
                 fill="none" 
                 stroke="currentColor" 
@@ -67,22 +70,22 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-white text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 sm:mb-6">{t('footer.navigation', 'Odkazy')}</h4>
+              <h4 className="text-ink text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 sm:mb-6">{t('footer.navigation', 'Odkazy')}</h4>
               <ul className="space-y-2 sm:space-y-3">
-                <li><Link to="/akce" className="text-white/60 hover:text-white text-sm transition-colors block">{t('common.nav.akce', 'Naše Akce')}</Link></li>
-                <li><Link to="/vize" className="text-white/60 hover:text-white text-sm transition-colors block">{t('common.nav.vize', 'O nás')}</Link></li>
+                <li><Link to="/akce" className="text-ink/65 hover:text-ink text-sm transition-colors block">{t('common.nav.akce', 'Naše Akce')}</Link></li>
+                <li><Link to="/vize" className="text-ink/65 hover:text-ink text-sm transition-colors block">{t('common.nav.vize', 'O nás')}</Link></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-white text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 sm:mb-6">{t('footer.institutions', 'Instituce')}</h4>
+              <h4 className="text-ink text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 sm:mb-6">{t('footer.institutions', 'Instituce')}</h4>
               <ul className="space-y-2 sm:space-y-3">
                 <li>
                   <a
                     href="https://www.gyarab.cz/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white/60 hover:text-white text-sm transition-colors flex items-center gap-2"
+                    className="text-ink/65 hover:text-ink text-sm transition-colors flex items-center gap-2"
                   >
                     <span className="break-words">{t('common.gymnazium', 'Gymnázium Arabská')}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-50 flex-shrink-0"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
@@ -92,8 +95,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-white/10">
-            <p className="text-white/40 text-xs text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-ink/10">
+            <p className="text-ink/50 text-xs text-center sm:text-left">
               © {new Date().getFullYear()} Youth Arabská. {t('footer.copyright', 'Všechna práva vyhrazena.')}
             </p>
           </div>

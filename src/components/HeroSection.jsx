@@ -7,21 +7,21 @@ export default function HeroSection() {
   const ref = useReveal()
 
   return (
-    <section className="relative min-h-screen flex items-center justify-start px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-48 overflow-hidden bg-transparent">
+    <section className="relative min-h-screen min-h-dvh flex items-center justify-start px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-48 overflow-hidden bg-transparent">
       <div className="max-w-7xl mx-auto w-full relative z-20">
         <div ref={ref} className="max-w-4xl lg:max-w-5xl reveal-enter">
 
-          <p className="flex items-center gap-3 mb-7 sm:mb-9 lg:mb-11 text-white/55 text-xs sm:text-sm font-medium">
-            <span className="w-6 h-px bg-dawn-gold/70" aria-hidden="true" />
+          <p className="flex items-center gap-3 mb-7 sm:mb-9 lg:mb-11 text-ink/60 text-xs sm:text-sm font-medium">
+            <span className="w-6 h-px bg-accent/70" aria-hidden="true" />
             <span>{t('hero.badge', 'Oficiální studentská platforma')}</span>
           </p>
 
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[1.05] tracking-tight mb-6 sm:mb-8">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[1.05] tracking-tight mb-6 sm:mb-8 text-ink">
             {t('hero.title_1')} <br />
             <span className="text-gradient-animated">{t('hero.title_2')}</span>
           </h1>
 
-          <p className="text-white/75 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl lg:max-w-3xl mb-10 sm:mb-14 font-light">
+          <p className="text-ink/70 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl lg:max-w-3xl mb-10 sm:mb-14 font-light">
             {t('hero.description', 'Spojujeme aktivní studenty, tvoříme projekty a pořádáme akce, které mají smysl. Přidej se k nám a získej reálné zkušenosti.')}
           </p>
 
@@ -51,7 +51,7 @@ export default function HeroSection() {
 
             <a
               href="mailto:serhii.khudanych.s@gyarab.cz"
-              className="px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 rounded-xl border border-white/15 bg-white/[0.03] text-white hover:bg-white/[0.07] hover:border-white/30 transition-all duration-300 font-semibold text-sm sm:text-base lg:text-lg text-center backdrop-blur-sm"
+              className="px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 rounded-xl border border-ink/15 bg-ink/[0.03] text-ink hover:bg-ink/[0.06] hover:border-ink/30 transition-all duration-300 font-semibold text-sm sm:text-base lg:text-lg text-center"
             >
               {t('hero.cta_secondary', 'Napište nám e-mail')}
             </a>

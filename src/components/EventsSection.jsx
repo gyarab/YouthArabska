@@ -28,25 +28,25 @@ function EventCard({ event, index }) {
     <article 
       ref={ref} 
       onClick={handleClick}
-      className="glass-card tap-press p-6 sm:p-8 group hover:border-dawn-gold/40 transition-all duration-500 reveal-enter cursor-pointer"
+      className="glass-card tap-press p-6 sm:p-8 group hover:border-accent/40 transition-all duration-500 reveal-enter cursor-pointer"
     >
       <div className="flex justify-between items-start mb-4 gap-2">
-        <span className="text-dawn-gold/80 text-xs font-bold tracking-widest uppercase">
+        <span className="text-accent text-xs font-bold tracking-widest uppercase">
           {t(`events.items.${event.key}.date`)}
         </span>
-        <span className="text-[10px] text-white/30 border border-white/10 px-2 py-0.5 rounded-full uppercase tracking-tighter flex-shrink-0">
+        <span className="text-[10px] text-ink/50 border border-ink/15 px-2 py-0.5 rounded-full uppercase tracking-tighter flex-shrink-0">
           {t('events.status_done')}
         </span>
       </div>
-      <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 group-hover:text-gradient transition-all leading-tight">
+      <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-ink mb-3 sm:mb-4 group-hover:text-gradient transition-all leading-tight">
         {t(`events.items.${event.key}.title`)}
       </h3>
-      <p className="text-white/60 text-sm leading-relaxed mb-4 sm:mb-6">
+      <p className="text-ink/65 text-sm leading-relaxed mb-4 sm:mb-6">
         {t(`events.items.${event.key}.desc`)}
       </p>
       <div className="flex gap-2 items-center">
-        <div className="w-8 h-px bg-dawn-gold/30 group-hover:w-16 transition-all duration-500" />
-        <span className="text-dawn-gold/60 text-xs group-hover:text-dawn-gold transition-colors whitespace-nowrap flex items-center gap-1">
+        <div className="w-8 h-px bg-accent/40 group-hover:w-16 transition-all duration-500" />
+        <span className="text-accent/70 text-xs group-hover:text-accent transition-colors whitespace-nowrap flex items-center gap-1">
           <span>{t('events.view_detail')}</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform">
             <path d="M5 12h14"/>
@@ -65,15 +65,15 @@ export default function EventsSection() {
     <section id="akce" className="relative py-16 sm:py-20 md:py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <header ref={headerRef} className="text-center mb-12 sm:mb-16 reveal-enter">
-          <p className="inline-flex items-center gap-3 mb-5 text-white/55 text-xs sm:text-sm font-medium">
-            <span className="w-6 h-px bg-dawn-gold/70" aria-hidden="true" />
+          <p className="inline-flex items-center gap-3 mb-5 text-ink/60 text-xs sm:text-sm font-medium">
+            <span className="w-6 h-px bg-accent/70" aria-hidden="true" />
             <span>{t('events.badge', 'Akce')}</span>
-            <span className="w-6 h-px bg-dawn-gold/70" aria-hidden="true" />
+            <span className="w-6 h-px bg-accent/70" aria-hidden="true" />
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
             {t('events.header_title')}
           </h2>
-          <p className="text-white/60 text-base sm:text-lg max-w-2xl mx-auto px-4">
+          <p className="text-ink/65 text-base sm:text-lg max-w-2xl mx-auto px-4">
             {t('events.header_subtitle')}
           </p>
         </header>

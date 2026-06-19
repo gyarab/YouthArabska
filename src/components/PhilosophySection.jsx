@@ -40,13 +40,13 @@ function SectionCard({ section, index }) {
   return (
     <article ref={ref} className="glass-card tap-press p-6 sm:p-8 flex flex-col gap-3 sm:gap-4 reveal-enter">
       <div className="flex items-start justify-between">
-        <div className="text-dawn-gold">{section.icon}</div>
+        <div className="text-accent">{section.icon}</div>
         <span className="card-index text-xs font-medium tabular-nums tracking-wider select-none" aria-hidden="true">
           {indexLabel}
         </span>
       </div>
-      <h3 className="font-serif text-lg sm:text-xl font-bold text-white">{t(`philosophy.sections.${section.key}.title`)}</h3>
-      <p className="text-white/65 text-sm leading-relaxed">{t(`philosophy.sections.${section.key}.text`)}</p>
+      <h3 className="font-serif text-lg sm:text-xl font-bold text-ink">{t(`philosophy.sections.${section.key}.title`)}</h3>
+      <p className="text-ink/70 text-sm leading-relaxed">{t(`philosophy.sections.${section.key}.text`)}</p>
     </article>
   )
 }
@@ -58,15 +58,15 @@ export default function PhilosophySection() {
     <section id="vize" className="relative py-16 sm:py-20 md:py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <header ref={headerRef} className="text-center mb-12 sm:mb-16 reveal-enter">
-          <p className="inline-flex items-center gap-3 mb-5 text-white/55 text-xs sm:text-sm font-medium">
-            <span className="w-6 h-px bg-dawn-gold/70" aria-hidden="true" />
+          <p className="inline-flex items-center gap-3 mb-5 text-ink/60 text-xs sm:text-sm font-medium">
+            <span className="w-6 h-px bg-accent/70" aria-hidden="true" />
             <span>{t('philosophy.badge', 'Naše filozofie')}</span>
-            <span className="w-6 h-px bg-dawn-gold/70" aria-hidden="true" />
+            <span className="w-6 h-px bg-accent/70" aria-hidden="true" />
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
             {t('philosophy.header_title')}
           </h2>
-          <p className="text-white/60 text-base sm:text-lg max-w-2xl mx-auto px-4">
+          <p className="text-ink/65 text-base sm:text-lg max-w-2xl mx-auto px-4">
             {t('philosophy.header_subtitle')}
           </p>
         </header>

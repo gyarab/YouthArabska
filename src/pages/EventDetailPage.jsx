@@ -61,12 +61,12 @@ export default function EventDetailPage() {
     return (
       <div className="min-h-screen pt-24 sm:pt-32 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h1 className="font-serif text-3xl sm:text-4xl font-bold text-ink mb-4">
             {t('event_detail.not_found')}
           </h1>
           <Link 
             to="/akce" 
-            className="inline-flex items-center gap-2 text-dawn-gold hover:text-dawn-orange transition-colors text-sm sm:text-base"
+            className="inline-flex items-center gap-2 text-accent hover:underline transition-colors text-sm sm:text-base"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="m15 18-6-6 6-6"/>
@@ -90,7 +90,7 @@ export default function EventDetailPage() {
         <div className="max-w-5xl mx-auto">
           <Link 
             to="/akce" 
-            className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors mb-6 sm:mb-8 group text-sm sm:text-base"
+            className="inline-flex items-center gap-2 text-ink/65 hover:text-ink transition-colors mb-6 sm:mb-8 group text-sm sm:text-base"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 transition-transform">
               <path d="m15 18-6-6 6-6"/>
@@ -100,33 +100,33 @@ export default function EventDetailPage() {
 
           <header ref={headerRef} className="mb-10 sm:mb-12 reveal-enter">
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-              <span className="text-dawn-gold/80 text-xs font-bold tracking-widest uppercase">
+              <span className="text-accent text-xs font-bold tracking-widest uppercase">
                 {t(`events.items.${event.key}.date`)}
               </span>
-              <span className="text-[10px] text-white/30 border border-white/10 px-3 py-1 rounded-full uppercase tracking-tighter">
+              <span className="text-[10px] text-ink/50 border border-ink/15 px-3 py-1 rounded-full uppercase tracking-tighter">
                 {t('events.status_done')}
               </span>
             </div>
 
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl font-bold text-ink mb-4 sm:mb-6 leading-tight">
               {t(`events.items.${event.key}.title`)}
             </h1>
 
-            <p className="text-white/70 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl">
+            <p className="text-ink/70 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl">
               {t(`events.items.${event.key}.desc`)}
             </p>
           </header>
 
           <div ref={contentRef} className="reveal-enter space-y-8 sm:space-y-12">
             <section className="glass-card p-6 sm:p-8 md:p-12">
-              <h2 className="font-serif text-2xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6">
+              <h2 className="font-serif text-2xl sm:text-2xl md:text-3xl font-bold text-ink mb-4 sm:mb-6">
                 {t('event_detail.about_title')}
               </h2>
-              <div className="prose prose-invert max-w-none">
-                <p className="text-white/70 leading-relaxed mb-4 text-sm sm:text-base">
+              <div className="prose max-w-none">
+                <p className="text-ink/70 leading-relaxed mb-4 text-sm sm:text-base">
                   {t('event_detail.about_text_1')}
                 </p>
-                <p className="text-white/70 leading-relaxed text-sm sm:text-base">
+                <p className="text-ink/70 leading-relaxed text-sm sm:text-base">
                   {t('event_detail.about_text_2')}
                 </p>
               </div>
@@ -134,7 +134,7 @@ export default function EventDetailPage() {
 
             {event.images && event.images.length > 0 && (
               <section className="glass-card p-6 sm:p-8 md:p-12">
-                <h2 className="font-serif text-2xl sm:text-2xl md:text-3xl font-bold text-white mb-6 sm:mb-8">
+                <h2 className="font-serif text-2xl sm:text-2xl md:text-3xl font-bold text-ink mb-6 sm:mb-8">
                   {t('event_detail.gallery_title')}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -143,7 +143,7 @@ export default function EventDetailPage() {
                       key={idx}
                       type="button"
                       onClick={() => setActiveImageIndex(idx)}
-                      className="group relative overflow-hidden rounded-xl bg-white/5 text-left"
+                      className="group relative overflow-hidden rounded-xl bg-ink/[0.04] text-left"
                     >
                       <div className="aspect-[4/3] overflow-hidden">
                         <img
@@ -163,13 +163,13 @@ export default function EventDetailPage() {
               </section>
             )}
 
-            <div className="glass-card p-6 sm:p-8 md:p-12 bg-gradient-to-br from-dawn-gold/5 to-dawn-orange/5 border-dawn-gold/20">
+            <div className="glass-card p-6 sm:p-8 md:p-12 bg-gradient-to-br from-accent/8 to-dawn-orange/8 border-accent/25">
               <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div>
-                  <h3 className="font-serif text-xl sm:text-2xl font-bold text-white mb-2">
+                  <h3 className="font-serif text-xl sm:text-2xl font-bold text-ink mb-2">
                     {t('event_detail.cta_title')}
                   </h3>
-                  <p className="text-white/70 text-sm sm:text-base">
+                  <p className="text-ink/70 text-sm sm:text-base">
                     {t('event_detail.cta_text')}
                   </p>
                 </div>
