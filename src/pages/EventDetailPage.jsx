@@ -8,10 +8,10 @@ const eventData = {
   'horizon-2025': {
     key: 'horizon_2025',
     images: [
-      { src: '/YouthArabskaWeb/Horizon1.jpg' },
-      { src: '/YouthArabskaWeb/Horizon2.jpg' },
-      { src: '/YouthArabskaWeb/Horizon5.jpg' },
-      { src: '/YouthArabskaWeb/Horizon4.jpg' }
+      { src: `${import.meta.env.BASE_URL}Horizon1.jpg` },
+      { src: `${import.meta.env.BASE_URL}Horizon2.jpg` },
+      { src: `${import.meta.env.BASE_URL}Horizon5.jpg` },
+      { src: `${import.meta.env.BASE_URL}Horizon4.jpg` }
     ]
   },
   'beyond-the-bell': {

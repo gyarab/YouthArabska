@@ -6,25 +6,25 @@ export default function PhotoGrid() {
   const photos = [
     { 
       id: 1, 
-      src: '/YouthArabskaWeb/Horizon1.jpg',
+      src: `${import.meta.env.BASE_URL}Horizon1.jpg`,
       alt: 'Youth Horizon - Registrace účastníků',
       description: 'Kdokoliv se mohl zúčastnit veletrhu Youth Horizon'
     },
     { 
       id: 2, 
-      src: '/YouthArabskaWeb/Horizon2.jpg',
+      src: `${import.meta.env.BASE_URL}Horizon2.jpg`,
       alt: 'Youth Horizon - Diskuse s hosty',
       description: 'Inspirativní diskuse s odborníky z různých oborů'
     },
     { 
       id: 3, 
-      src: '/YouthArabskaWeb/Horizon5.jpg',
+      src: `${import.meta.env.BASE_URL}Horizon5.jpg`,
       alt: 'Youth Horizon - Networking',
       description: 'Stánky s interaktivními aktivitami pro účastníky Youth Horizon'
     },
     { 
       id: 4, 
-      src: '/YouthArabskaWeb/Horizon4.jpg',
+      src: `${import.meta.env.BASE_URL}Horizon4.jpg`,
       alt: 'Youth Horizon - Prezentace',
       description: 'Organizátoři akce Youth Horizon - Adam a Lujza'
     },

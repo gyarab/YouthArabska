@@ -21,8 +21,8 @@ Následujte tyto kroky pro zprovoznění projektu na vašem počítači:
 
 1. **Klonování repozitáře:**
    ```bash
-   git clone https://github.com/sergioGyarab/YouthArabskaWeb.git
-   cd YouthArabskaWeb
+   git clone https://github.com/gyarab/YouthArabska.git
+   cd YouthArabska
    ```
 
 2. **Instalace závislostí:**

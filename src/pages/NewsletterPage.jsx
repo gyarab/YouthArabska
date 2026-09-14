@@ -31,7 +31,7 @@ const newsletters = [
 function NewsletterCard({ nl }) {
   return (
     <a
-      href={`/YouthArabskaWeb/${nl.file}`}
+      href={`${import.meta.env.BASE_URL}${nl.file}`}
       target="_blank"
       rel="noopener noreferrer"
       className="glass-card group relative flex flex-col justify-between p-6 sm:p-8"

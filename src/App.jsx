@@ -37,7 +37,7 @@ function NotFound() {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/YouthArabskaWeb">
+    <BrowserRouter basename="/YouthArabska">
       <ScrollToTop />
       <SpotlightTracker />
       <PremiumBackground />
