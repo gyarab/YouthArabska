@@ -32,8 +32,8 @@ export default function AllianceSection() {
               </p>
               <p className="break-all">
                 <strong className="text-ink">{t('alliance.labels.communication')}:</strong>{' '}
-                <a href="mailto:matous.tlamka.s@gyarab.cz" className="text-accent hover:underline transition-colors">
-                  matous.tlamka.s@gyarab.cz
+                <a href="mailto:adam.hruska.s@gyarab.cz" className="text-accent hover:underline transition-colors">
+                  adam.hruska.s@gyarab.cz
                 </a>
               </p>
             </div>
