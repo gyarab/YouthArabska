@@ -1,8 +1,6 @@
 import useReveal from '../hooks/useReveal'
-import { useTranslation } from 'react-i18next'
 
 export default function PhotoGrid() {
-  const { t } = useTranslation()
   const ref = useReveal()
   
   const photos = [
@@ -48,9 +46,9 @@ export default function PhotoGrid() {
           {photos.map((photo) => (
             <div 
               key={photo.id} 
-              className="relative group cursor-pointer rounded-xl sm:rounded-2xl transition-transform duration-500 sm:hover:-translate-y-2"
+              className="relative group cursor-pointer rounded-xl sm:rounded-2xl transition-transform duration-300 sm:hover:-translate-y-1.5"
             >
-              <div className="relative aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl border border-ink/10 bg-ink/[0.04] shadow-[0_8px_24px_-12px_rgba(38,34,52,0.25)] sm:shadow-[0_14px_36px_-16px_rgba(38,34,52,0.3)] ring-1 ring-ink/5 group-hover:shadow-[0_20px_50px_-18px_rgba(190,122,18,0.35)] transition-shadow duration-500">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl border border-ink/10 bg-ink/[0.04] shadow-[0_8px_24px_-12px_rgba(38,34,52,0.18)] sm:shadow-[0_14px_36px_-16px_rgba(38,34,52,0.22)] ring-1 ring-ink/5">
                 
                 <img 
                   src={photo.src} 

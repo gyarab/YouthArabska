@@ -4,29 +4,21 @@ import { useTranslation } from 'react-i18next'
 
 export default function Header() {
   const { t } = useTranslation()
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(() => (typeof window !== 'undefined' ? window.scrollY > 50 : false))
   const [navOpen, setNavOpen] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
-    let ticking = false
-    let lastScrolled = false
+    let lastScrolled = window.scrollY > 50
 
     const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const nextScrolled = window.scrollY > 50
-          if (nextScrolled !== lastScrolled) {
-            lastScrolled = nextScrolled
-            setScrolled(nextScrolled)
-          }
-          ticking = false
-        })
-        ticking = true
+      const nextScrolled = window.scrollY > 50
+      if (nextScrolled !== lastScrolled) {
+        lastScrolled = nextScrolled
+        setScrolled(nextScrolled)
       }
     }
 
-    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -39,9 +31,10 @@ export default function Header() {
   const navLinks = [
     { to: '/akce', label: t('common.nav.akce', 'Naše Akce'), scrollId: 'akce' },
     { to: '/vize', label: t('common.nav.vize', 'O nás'), scrollId: 'vize' },
+    { to: '/newsletter', label: t('common.nav.newsletter', 'Newsletter'), scrollId: 'newsletter' },
   ]
 
-  const handleNavLinkClick = (e, to, scrollId) => {
+  const handleNavLinkClick = (e, to) => {
     setNavOpen(false)
     if (location.pathname === to || (location.pathname === '/' && to === '/')) {
       e.preventDefault()
@@ -52,14 +45,14 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md backdrop-saturate-150 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color,box-shadow] duration-200 ${
           scrolled
-            ? 'bg-milk/90 border-b border-ink/10 shadow-[0_12px_40px_-18px_rgba(38,34,52,0.25)]'
-            : 'bg-milk/80 border-b border-ink/[0.06] shadow-[0_8px_30px_-20px_rgba(38,34,52,0.18)]'
+            ? 'bg-milk border-b border-ink/10 shadow-[0_10px_30px_-15px_rgba(38,34,52,0.12)]'
+            : 'bg-milk/90 border-b border-ink/[0.06]'
         }`}
         style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
       >
-        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between transition-all duration-300 ${scrolled ? 'py-3 lg:py-4' : 'py-4 lg:py-6'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3.5 lg:py-4">
           {location.pathname === '/' ? (
             <span className="flex items-center">
               <span className="text-ink font-serif font-bold text-2xl lg:text-3xl tracking-wide">
@@ -126,7 +119,7 @@ export default function Header() {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    onClick={(e) => handleNavLinkClick(e, link.to, link.scrollId)}
+                    onClick={(e) => handleNavLinkClick(e, link.to)}
                     className={`transition-all duration-200 text-sm lg:text-base font-medium tracking-wide ${
                       location.pathname === link.to ? 'text-accent' : 'text-ink/65 hover:text-ink hover:-translate-y-0.5'
                     }`}
@@ -139,8 +132,7 @@ export default function Header() {
             
             <div className="flex items-center gap-4">
               <a
-                href="#contact"
-                onClick={(e) => { e.preventDefault(); window.location.href = 'mai' + 'lto:' + 'serhii.khudanych.s' + '@' + 'gyarab.cz' }}
+                href="mailto:adam.hruska.s@gyarab.cz"
                 className="px-5 py-2.5 rounded-lg bg-ink/[0.05] hover:bg-ink/[0.09] text-ink transition-all duration-200 text-sm lg:text-base font-medium border border-ink/15"
               >
                 {t('common.contact', 'Napište nám')}
@@ -234,7 +226,7 @@ export default function Header() {
                 >
                   <Link
                     to={link.to}
-                    onClick={(e) => handleNavLinkClick(e, link.to, link.scrollId)}
+                    onClick={(e) => handleNavLinkClick(e, link.to)}
                     className={`group flex items-center justify-between py-3.5 px-4 rounded-xl transition-all duration-200 text-[15px] font-medium tracking-wide border-l-2 ${
                       isActive
                         ? 'bg-gradient-to-r from-accent/12 via-accent/5 to-transparent text-accent border-accent'
@@ -283,8 +275,7 @@ export default function Header() {
               style={{ transitionDelay: navOpen ? '260ms' : '0ms' }}
             >
               <a
-                href="#contact"
-                onClick={(e) => { e.preventDefault(); window.location.href = 'mai' + 'lto:' + 'serhii.khudanych.s' + '@' + 'gyarab.cz' }}
+                href="mailto:adam.hruska.s@gyarab.cz"
                 className="group flex flex-col items-center justify-center gap-1.5 py-4 px-3 rounded-2xl bg-ink/[0.04] hover:bg-ink/[0.08] border border-ink/10 hover:border-accent/40 transition-all duration-200"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-accent/80 group-hover:text-accent transition-colors">

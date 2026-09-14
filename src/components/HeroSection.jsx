@@ -18,7 +18,7 @@ export default function HeroSection() {
 
           <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[1.05] tracking-tight mb-6 sm:mb-8 text-ink">
             {t('hero.title_1')} <br />
-            <span className="text-gradient-animated">{t('hero.title_2')}</span>
+            <span className="text-gradient">{t('hero.title_2')}</span>
           </h1>
 
           <p className="text-ink/70 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl lg:max-w-3xl mb-10 sm:mb-14 font-light">
@@ -28,7 +28,7 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6">
             <Link
               to="/akce/horizon-2025"
-              className="btn-glow-gold group relative px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 rounded-xl bg-gradient-to-r from-dawn-gold to-dawn-orange text-black font-bold text-sm sm:text-base lg:text-lg hover:scale-[1.02] transition-all duration-300 text-center inline-flex items-center justify-center gap-2"
+              className="btn-glow-gold group relative px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 rounded-xl bg-gradient-to-r from-dawn-gold to-dawn-orange text-black font-bold text-sm sm:text-base lg:text-lg hover:scale-[1.02] transition-transform duration-200 text-center inline-flex items-center justify-center gap-2"
             >
               <span>{t('hero.cta_primary', 'Objevte Youth Horizon')}</span>
               <svg
@@ -50,8 +50,8 @@ export default function HeroSection() {
             </Link>
 
             <a
-              href="mailto:serhii.khudanych.s@gyarab.cz"
-              className="px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 rounded-xl border border-ink/15 bg-ink/[0.03] text-ink hover:bg-ink/[0.06] hover:border-ink/30 transition-all duration-300 font-semibold text-sm sm:text-base lg:text-lg text-center"
+              href="mailto:adam.hruska.s@gyarab.cz"
+              className="px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 rounded-xl border border-ink/15 bg-ink/[0.03] text-ink hover:bg-ink/[0.06] hover:border-ink/30 transition-colors duration-200 font-semibold text-sm sm:text-base lg:text-lg text-center"
             >
               {t('hero.cta_secondary', 'Napište nám e-mail')}
             </a>

@@ -6,7 +6,14 @@ Tento projekt je webová aplikace pro projekt Youth Arabská, postavená na **Re
 
 Před spuštěním se ujistěte, že máte nainstalované:
 - [Node.js](https://nodejs.org/) (doporučena verze 18.x nebo novější)
-- [npm](https://www.npmjs.com/) (obvykle součástí instalace Node.js)
+- [pnpm](https://pnpm.io/) (projekt používá `pnpm` jako správce balíčků místo `npm`)
+
+Pokud nemáte `pnpm` nainstalovaný, můžete ho nainstalovat globálně:
+```bash
+npm install -g pnpm
+# nebo přes Corepack:
+corepack enable
+```
 
 ## Spuštění projektu
 
@@ -14,27 +21,27 @@ Následujte tyto kroky pro zprovoznění projektu na vašem počítači:
 
 1. **Klonování repozitáře:**
    ```bash
-   git clone https://github.com/vase-uzivatelske-jmeno/YouthArabskaWeb.git
+   git clone https://github.com/sergioGyarab/YouthArabskaWeb.git
    cd YouthArabskaWeb
    ```
 
 2. **Instalace závislostí:**
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. **Spuštění vývojového serveru:**
    ```bash
-   npm run dev
+   pnpm dev
    ```
    Aplikace bude dostupná na adrese `http://localhost:5173`.
 
 ## Dostupné příkazy
 
-- `npm run dev` – spustí lokální vývojový server
-- `npm run build` – vytvoří produkční verzi aplikace ve složce `dist`
-- `npm run preview` – lokální náhled produkčního buildu
-- `npm run lint` – provede kontrolu kvality kódu (ESLint)
+- `pnpm dev` – spustí lokální vývojový server
+- `pnpm build` – vytvoří produkční verzi aplikace ve složce `dist`
+- `pnpm preview` – lokální náhled produkčního buildu
+- `pnpm lint` – provede kontrolu kvality kódu (ESLint)
 
 ## Deployment
 

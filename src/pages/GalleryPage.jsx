@@ -1,11 +1,9 @@
 import SEO from '../components/SEO'
 import PhotoGrid from '../components/PhotoGrid'
-import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import useReveal from '../hooks/useReveal'
 
 export default function GalleryPage() {
-  const { t } = useTranslation()
   const heroRef = useReveal()
   const ctaRef = useReveal()
 
@@ -58,7 +56,7 @@ export default function GalleryPage() {
                 href="https://www.instagram.com/youtharabska/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-glow-gold px-8 py-4 rounded-xl bg-gradient-to-r from-dawn-gold to-dawn-orange text-black font-semibold text-base hover:scale-[1.02] transition-all duration-300 text-center flex items-center justify-center gap-2"
+                className="btn-glow-gold px-8 py-4 rounded-xl bg-gradient-to-r from-dawn-gold to-dawn-orange text-black font-semibold text-base hover:scale-[1.02] transition-transform duration-200 text-center flex items-center justify-center gap-2"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
@@ -69,7 +67,7 @@ export default function GalleryPage() {
               </a>
               <Link
                 to="/get-involved"
-                className="px-8 py-4 rounded-xl border border-ink/20 text-ink/80 hover:bg-ink/[0.05] hover:text-ink transition-all duration-200 font-semibold text-base text-center"
+                className="px-8 py-4 rounded-xl border border-ink/20 text-ink/80 hover:bg-ink/[0.05] hover:text-ink transition-colors duration-200 font-semibold text-base text-center"
               >
                 Připoj se k nám
               </Link>

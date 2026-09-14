@@ -5,103 +5,135 @@ import useReveal from '../hooks/useReveal'
 export default function AllianceSection() {
   const { t } = useTranslation()
   const ref = useReveal()
-  const [submitted, setSubmitted] = useState(false)
+  const [copiedEmail, setCopiedEmail] = useState(null)
 
-  function handleSubmit(e) {
-    e.preventDefault()
-    setSubmitted(true)
+  function handleCopy(email) {
+    navigator.clipboard.writeText(email)
+    setCopiedEmail(email)
+    setTimeout(() => setCopiedEmail(null), 2500)
   }
+
+  const organizers = [
+    {
+      name: 'Adam Hruška',
+      role: 'Organizátor Youth Arabské',
+      email: 'adam.hruska.s@gyarab.cz',
+      mailto: 'mailto:adam.hruska.s@gyarab.cz?subject=Žádost%20o%20připojení%20k%20Youth%20Arabské',
+    },
+    {
+      name: 'Lujza Palečková',
+      role: 'Organizátorka Youth Arabské',
+      email: 'lujza.paleckova.s@gyarab.cz',
+      mailto: 'mailto:lujza.paleckova.s@gyarab.cz?subject=Žádost%20o%20připojení%20k%20Youth%20Arabské',
+    },
+  ]
 
   return (
     <section id="spojenectvi" className="relative py-16 sm:py-20 md:py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div
           ref={ref}
-          className="glass-card p-6 sm:p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 reveal-enter"
+          className="glass-card p-6 sm:p-10 md:p-14 reveal-enter rounded-3xl"
         >
-          <div>
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-5xl font-bold text-ink mb-4 sm:mb-6">
-              {t('alliance.title')}
-            </h2>
-            <p className="text-ink/70 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
-              {t('alliance.description')}
-            </p>
-            <div className="space-y-2 text-ink/70 text-xs sm:text-sm">
-              <p className="break-words">
-                <strong className="text-ink">{t('alliance.labels.headquarters')}:</strong> {t('common.gymnazium_long')}
-              </p>
-              <p className="break-all">
-                <strong className="text-ink">{t('alliance.labels.communication')}:</strong>{' '}
-                <a href="mailto:adam.hruska.s@gyarab.cz" className="text-accent hover:underline transition-colors">
-                  adam.hruska.s@gyarab.cz
-                </a>
-              </p>
+          {/* Section Header */}
+          <div className="max-w-3xl mb-10 sm:mb-12">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-8 h-px bg-accent/60" />
+              <span className="text-accent text-xs font-semibold tracking-widest uppercase">
+                {t('alliance.badge', 'Přímý kontakt')}
+              </span>
             </div>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-ink mb-4">
+              {t('alliance.title', 'Chceš se přidat?')}
+            </h2>
+            <p className="text-ink/75 text-base sm:text-lg leading-relaxed">
+              {t(
+                'alliance.description',
+                'Hledáme lidi, kteří chtějí něco dělat — ne jen být součástí. Věříme na přímou komunikaci bez anonymních formulářů. Napiš e-mail přímo Adamovi nebo Lujze a domluvíme se.'
+              )}
+            </p>
           </div>
 
-          <div>
-            {submitted ? (
-              <div className="flex flex-col items-center justify-center h-full text-center gap-4 py-8">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-accent/15 flex items-center justify-center">
-                  <svg className="w-7 h-7 sm:w-8 sm:h-8 text-accent" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
+          {/* Organizer Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            {organizers.map((org) => (
+              <div
+                key={org.email}
+                className="glass-card p-6 sm:p-8 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-accent/12 text-accent text-xs font-semibold">
+                      {org.role}
+                    </span>
+                  </div>
+
+                  <h3 className="font-serif text-2xl font-bold text-ink mb-1">
+                    {org.name}
+                  </h3>
+
+                  <p className="text-ink/65 text-sm font-mono break-all mb-6">
+                    {org.email}
+                  </p>
                 </div>
-                <p className="text-ink font-semibold text-base sm:text-lg">{t('alliance.success_title')}</p>
-                <p className="text-ink/65 text-sm">{t('alliance.success_text')}</p>
+
+                <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                  <a
+                    href={org.mailto}
+                    className="btn-glow-gold flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-dawn-gold to-dawn-orange text-black font-bold text-sm text-center inline-flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform duration-200"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"/>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                    <span>Napsat e-mail</span>
+                  </a>
+
+                  <button
+                    type="button"
+                    onClick={() => handleCopy(org.email)}
+                    className="py-3 px-4 rounded-xl border border-ink/15 hover:bg-ink/[0.05] text-ink/80 text-sm font-semibold transition-colors duration-200 flex items-center justify-center gap-2"
+                  >
+                    {copiedEmail === org.email ? (
+                      <>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-600">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <span className="text-emerald-700 font-bold">Zkopírováno!</span>
+                      </>
+                    ) : (
+                      <>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                          <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                        </svg>
+                        <span>Kopírovat e-mail</span>
+                      </>
+                    )}
+                  </button>
+                </div>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-                <div>
-                  <label htmlFor="alliance-name" className="block text-ink/70 text-xs font-semibold mb-1.5 tracking-wide uppercase">
-                    {t('alliance.labels.name')}
-                  </label>
-                  <input
-                    id="alliance-name"
-                    name="name"
-                    type="text"
-                    required
-                    autoComplete="name"
-                    placeholder={t('alliance.placeholders.name')}
-                    className="w-full bg-ink/[0.03] border border-ink/15 rounded-lg px-3 py-2.5 sm:px-4 sm:py-3 text-ink placeholder-ink/40 text-sm focus:outline-none focus:border-accent/60 focus:bg-ink/[0.05] transition-all"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="alliance-email" className="block text-ink/70 text-xs font-semibold mb-1.5 tracking-wide uppercase">
-                    {t('alliance.labels.email')}
-                  </label>
-                  <input
-                    id="alliance-email"
-                    name="email"
-                    type="email"
-                    required
-                    autoComplete="email"
-                    placeholder={t('alliance.placeholders.email')}
-                    className="w-full bg-ink/[0.03] border border-ink/15 rounded-lg px-3 py-2.5 sm:px-4 sm:py-3 text-ink placeholder-ink/40 text-sm focus:outline-none focus:border-accent/60 focus:bg-ink/[0.05] transition-all"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="alliance-vision" className="block text-ink/70 text-xs font-semibold mb-1.5 tracking-wide uppercase">
-                    {t('alliance.labels.vision')}
-                  </label>
-                  <textarea
-                    id="alliance-vision"
-                    name="vision"
-                    required
-                    rows={6}
-                    autoComplete="off"
-                    placeholder={t('alliance.placeholders.vision')}
-                    className="w-full bg-ink/[0.03] border border-ink/15 rounded-lg px-3 py-2.5 sm:px-4 sm:py-3 text-ink placeholder-ink/40 text-sm focus:outline-none focus:border-accent/60 focus:bg-ink/[0.05] transition-all resize-none leading-relaxed"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="btn-glow-gold w-full py-3 sm:py-4 rounded-xl bg-gradient-to-r from-dawn-gold to-dawn-orange text-black font-bold text-sm hover:scale-[1.01] transition-all duration-300 uppercase tracking-widest"
-                >
-                  {t('alliance.submit')}
-                </button>
-              </form>
-            )}
+            ))}
+          </div>
+
+          {/* Bottom Combined Banner */}
+          <div className="pt-6 border-t border-ink/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="text-ink/70 text-sm">
+              <span className="font-semibold text-ink">{t('alliance.labels.headquarters', 'Kde nás najdeš')}:</span> {t('common.gymnazium_long')}
+            </div>
+
+            <a
+              href="mailto:adam.hruska.s@gyarab.cz?cc=lujza.paleckova.s@gyarab.cz&subject=Žádost%20o%20připojení%20k%20Youth%20Arabské"
+              className="w-full sm:w-auto px-6 py-3 rounded-xl border border-ink/20 hover:border-accent/40 bg-ink/[0.03] hover:bg-ink/[0.06] text-ink font-semibold text-sm transition-all duration-200 text-center inline-flex items-center justify-center gap-2"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              <span>Napsat oběma organizátorům</span>
+            </a>
           </div>
         </div>
       </div>

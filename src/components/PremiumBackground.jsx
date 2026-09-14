@@ -1,20 +1,19 @@
 /**
  * PremiumBackground (light "milk" theme)
  *
- * A static, GPU-cheap milk-white backdrop with very soft warm color
- * washes baked directly into a multi-stop CSS radial-gradient.
+ * A static, lightweight milk-white backdrop with soft warm color
+ * washes baked directly into CSS radial-gradients.
  *
- * Performance note: the previous version stacked three 600–820px <div>s
- * each with `filter: blur(120–160px)` plus an SVG grain layer and a
- * vignette. Large blur filters force the browser to allocate big
- * offscreen layers and re-composite them on every scroll/paint — a real
- * jank source on phones. Here there is no `filter`, no animation and no
- * extra layers: just one painted gradient that the GPU handles trivially.
+ * Performance note:
+ * - NO `will-change: transform` or 3D translations, preventing continuous
+ *   GPU layer compositing / discrete GPU wake-up on hybrid laptops.
+ * - Sits at `-z-10` with `pointer-events-none` so it never participates in
+ *   pointer hits or layout invalidations.
  */
 export default function PremiumBackground() {
   return (
     <div
-      className="fixed inset-0 z-0 pointer-events-none"
+      className="fixed inset-0 -z-10 pointer-events-none"
       aria-hidden="true"
       style={{
         background: [

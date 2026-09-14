@@ -30,7 +30,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto mb-8 sm:mb-12">
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="group relative">
-              <div className="glass-card p-6 sm:p-8 h-full flex flex-col justify-between hover:border-accent/50 transition-all duration-300">
+              <div className="glass-card p-6 sm:p-8 h-full flex flex-col justify-between">
                 <div className="mb-4 sm:mb-6">
                   <svg className="w-8 h-8 sm:w-10 sm:h-10 text-accent/40 group-hover:text-accent/60 transition-colors" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-2.5-6-2.5-1.986 0-2 .75-2 1.972V11c0 1-1 2-1 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
@@ -38,7 +38,7 @@ export default function Testimonials() {
                 </div>
 
                 <p className="text-ink/80 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6 flex-grow">
-                  "{t(`testimonials.items.${testimonial.id}.quote`)}"
+                  „{t(`testimonials.items.${testimonial.id}.quote`)}“
                 </p>
 
                 <div className="border-t border-ink/10 pt-4">
@@ -47,7 +47,7 @@ export default function Testimonials() {
                 </div>
               </div>
 
-              <div className="absolute -inset-4 bg-gradient-to-br from-accent/10 to-dawn-orange/10 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 pointer-events-none" />
+              <div className="absolute -inset-1 bg-gradient-to-br from-accent/8 to-dawn-orange/8 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 pointer-events-none" />
             </div>
           ))}
         </div>
