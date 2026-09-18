@@ -25,6 +25,10 @@ export default function SEO({
       <meta property="og:description" content={ogDescription || description} />
       <meta property="og:url" content={`${BASE_URL}${canonical || '/'}`} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:secure_url" content={ogImage} />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta name="twitter:title" content={ogTitle || fullTitle} />
       <meta name="twitter:description" content={ogDescription || description} />
       <meta name="twitter:image" content={ogImage} />
