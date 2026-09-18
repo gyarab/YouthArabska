@@ -18,13 +18,13 @@ export default function AllianceSection() {
       name: 'Adam Hruška',
       role: 'Organizátor Youth Arabské',
       email: 'adam.hruska.s@gyarab.cz',
-      mailto: 'mailto:adam.hruska.s@gyarab.cz?subject=Žádost%20o%20připojení%20k%20Youth%20Arabské',
+      mailto: 'mailto:adam.hruska.s@gyarab.cz?subject=Chci%20se%20zapojit%20do%20Youth%20Arabské',
     },
     {
       name: 'Lujza Palečková',
       role: 'Organizátorka Youth Arabské',
       email: 'lujza.paleckova.s@gyarab.cz',
-      mailto: 'mailto:lujza.paleckova.s@gyarab.cz?subject=Žádost%20o%20připojení%20k%20Youth%20Arabské',
+      mailto: 'mailto:lujza.paleckova.s@gyarab.cz?subject=Chci%20se%20zapojit%20do%20Youth%20Arabské',
     },
   ]
 
@@ -123,7 +123,7 @@ export default function AllianceSection() {
             </div>
 
             <a
-              href="mailto:adam.hruska.s@gyarab.cz?cc=lujza.paleckova.s@gyarab.cz&subject=Žádost%20o%20připojení%20k%20Youth%20Arabské"
+              href="mailto:adam.hruska.s@gyarab.cz?cc=lujza.paleckova.s@gyarab.cz&subject=Chci%20se%20zapojit%20do%20Youth%20Arabské"
               className="w-full sm:w-auto px-6 py-3 rounded-xl border border-ink/20 hover:border-accent/40 bg-ink/[0.03] hover:bg-ink/[0.06] text-ink font-semibold text-sm transition-all duration-200 text-center inline-flex items-center justify-center gap-2"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

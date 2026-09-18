@@ -135,7 +135,7 @@ export default function Header() {
                 href="mailto:adam.hruska.s@gyarab.cz"
                 className="px-5 py-2.5 rounded-lg bg-ink/[0.05] hover:bg-ink/[0.09] text-ink transition-all duration-200 text-sm lg:text-base font-medium border border-ink/15"
               >
-                {t('common.contact', 'Napište nám')}
+                {t('common.contact', 'Napiš nám')}
               </a>
               <a
                 href="https://www.instagram.com/youtharabska/"
@@ -283,7 +283,7 @@ export default function Header() {
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
                 <span className="text-ink/85 group-hover:text-ink text-[12px] font-medium tracking-wide transition-colors">
-                  {t('common.contact', 'Napište nám')}
+                  {t('common.contact', 'Napiš nám')}
                 </span>
               </a>
               <a

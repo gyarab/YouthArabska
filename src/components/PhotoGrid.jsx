@@ -7,26 +7,26 @@ export default function PhotoGrid() {
     { 
       id: 1, 
       src: `${import.meta.env.BASE_URL}Horizon1.jpg`,
-      alt: 'Youth Horizon - Registrace účastníků',
-      description: 'Kdokoliv se mohl zúčastnit veletrhu Youth Horizon'
+      alt: 'Youth Horizon – registrace účastníků',
+      description: 'Atmosféra při vstupu na veletrh Youth Horizon'
     },
     { 
       id: 2, 
       src: `${import.meta.env.BASE_URL}Horizon2.jpg`,
-      alt: 'Youth Horizon - Diskuse s hosty',
+      alt: 'Youth Horizon – panelová diskuse',
       description: 'Inspirativní diskuse s odborníky z různých oborů'
     },
     { 
       id: 3, 
       src: `${import.meta.env.BASE_URL}Horizon5.jpg`,
-      alt: 'Youth Horizon - Networking',
-      description: 'Stánky s interaktivními aktivitami pro účastníky Youth Horizon'
+      alt: 'Youth Horizon – stánky a networking',
+      description: 'Stánky s interaktivními aktivitami pro účastníky'
     },
     { 
       id: 4, 
       src: `${import.meta.env.BASE_URL}Horizon4.jpg`,
-      alt: 'Youth Horizon - Prezentace',
-      description: 'Organizátoři akce Youth Horizon - Adam a Lujza'
+      alt: 'Youth Horizon – organizátoři',
+      description: 'Organizátoři akce Youth Horizon – Adam a Lujza'
     },
   ]
 

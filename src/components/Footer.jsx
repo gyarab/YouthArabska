@@ -71,7 +71,7 @@ export default function Footer() {
             <div>
               <h4 className="text-ink text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 sm:mb-6">{t('footer.navigation', 'Odkazy')}</h4>
               <ul className="space-y-2 sm:space-y-3">
-                <li><Link to="/akce" className="text-ink/65 hover:text-ink text-sm transition-colors block">{t('common.nav.akce', 'Naše Akce')}</Link></li>
+                <li><Link to="/akce" className="text-ink/65 hover:text-ink text-sm transition-colors block">{t('common.nav.akce', 'Naše akce')}</Link></li>
                 <li><Link to="/vize" className="text-ink/65 hover:text-ink text-sm transition-colors block">{t('common.nav.vize', 'O nás')}</Link></li>
                 <li><Link to="/newsletter" className="text-ink/65 hover:text-ink text-sm transition-colors block">{t('common.nav.newsletter', 'Newsletter')}</Link></li>
                 <li><Link to="/gallery" className="text-ink/65 hover:text-ink text-sm transition-colors block">{t('common.nav.gallery', 'Galerie')}</Link></li>

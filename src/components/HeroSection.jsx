@@ -30,7 +30,7 @@ export default function HeroSection() {
               to="/akce/horizon-2025"
               className="btn-glow-gold group relative px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 rounded-xl bg-gradient-to-r from-dawn-gold to-dawn-orange text-black font-bold text-sm sm:text-base lg:text-lg hover:scale-[1.02] transition-transform duration-200 text-center inline-flex items-center justify-center gap-2"
             >
-              <span>{t('hero.cta_primary', 'Objevte Youth Horizon')}</span>
+              <span>{t('hero.cta_primary', 'Objev Youth Horizon')}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -53,7 +53,7 @@ export default function HeroSection() {
               href="mailto:adam.hruska.s@gyarab.cz"
               className="px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 rounded-xl border border-ink/15 bg-ink/[0.03] text-ink hover:bg-ink/[0.06] hover:border-ink/30 transition-colors duration-200 font-semibold text-sm sm:text-base lg:text-lg text-center"
             >
-              {t('hero.cta_secondary', 'Napište nám e-mail')}
+              {t('hero.cta_secondary', 'Napiš nám')}
             </a>
           </div>
 

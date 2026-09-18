@@ -11,10 +11,10 @@ export default function GalleryPage() {
     <>
       <SEO
         title="Galerie – Youth Arabská"
-        description="Prohlédněte si fotografie z našich akcí, setkání a Event Youth Horizonu. Videa a fotografie z komunity Youth Arabská."
+        description="Prohlédni si momentky z našich akcí, setkání a veletrhu Youth Horizon. Nahlédni do komunity Youth Arabská."
         canonical="/gallery"
         ogTitle="Galerie | Youth Arabská – Momentky z našich akcí"
-        ogDescription="Podívejte se na energii a atmosféru naší komunity skrze fotografie z akcí a setkání."
+        ogDescription="Podívej se na energii a atmosféru naší komunity skrze fotografie z akcí a setkání."
       />
 
       {/* Hero Section */}
@@ -46,10 +46,10 @@ export default function GalleryPage() {
         <div className="max-w-4xl mx-auto text-center">
           <div ref={ctaRef} className="reveal-enter">
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-ink">
-              Chcete být součástí příběhu?
+              Chceš být součástí příběhu?
             </h2>
             <p className="text-ink/65 text-lg mb-8">
-              Připoj se k Youth Arabské a staň se součástí komunity, kde se dějí věci. Fotografie a videa z tvých příspěvků by mohly inspirovat další studenty.
+              Připoj se k Youth Arabské a staň se součástí komunity, kde se věci posouvají dopředu. Získej zkušenosti a kontakty, které tě posunou dál.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

@@ -22,89 +22,89 @@
     "title_template": "{{title}} | Youth Arabská",
     "home": {
       "title": "Překračujeme zavedené hranice",
-      "description": "Youth Arabská je studentská komunita Gymnázia Arabská 14. Pořádáme akce, propojujeme lidi a děláme školu místem, kde se dějí věci.",
+      "description": "Youth Arabská je studentská komunita Gymnázia Arabská 14. Pořádáme akce, propojujeme lidi a měníme školu v místo, kde se dějí věci.",
       "og_title": "Youth Arabská | Komunita, která to myslí vážně",
-      "og_description": "Připoj se k nám a objev, co se dá dělat, když se sejdou správní lidé na jednom místě."
+      "og_description": "Připoj se k nám a objev, co všechno se dá dokázat, když se na jednom místě potkají aktivní lidé."
     },
     "vize": {
       "title": "O nás – Kdo jsme a proč nás to baví",
-      "description": "Jsme studenti Gymnázia Arabská. Propojujeme školu s reálným světem a dáváme prostor každému, kdo chce něco dělat.",
+      "description": "Jsme studenti Gymnázia Arabská. Propojujeme školu s praxí a dáváme prostor každému, kdo chce tvořit a posouvat se.",
       "og_title": "O nás | Youth Arabská",
-      "og_description": "Budoucnost není to, co přijde, ale to, co uděláme. Přidej se."
+      "og_description": "Budoucnost není to, co pasivně přijde, ale to, co sami vytvoříme. Přidej se k nám."
     },
     "horizon": {
       "title": "Youth Horizon – Veletrh příležitostí",
-      "description": "Každoroční akce na Arabské, kde se studenti potkají s lidmi z byznysu, vědy a veřejného sektoru.",
+      "description": "Veletrh příležitostí na Arabské, kde se studenti potkávají s lidmi z byznysu, vědy a veřejného sektoru.",
       "og_title": "Youth Horizon | Veletrh příležitostí",
-      "og_description": "Stáže, kontakty a inspirace. Vše začíná tady."
+      "og_description": "Stáže, inspirace a kontakty pro budoucnost. Vše začíná tady."
     },
     "akce": {
       "title": "Naše akce – Co u nás probíhá",
-      "description": "Workshopy, veletrhy a setkání, která mají smysl. Přijď se podívat, co děláme.",
+      "description": "Workshopy, veletrhy a setkání, která mají smysl. Přijď se podívat, co tvoříme.",
       "og_title": "Akce | Youth Arabská",
       "og_description": "Propojujeme teorii s praxí. Podívej se na naše projekty."
     },
     "spojenectvi": {
-      "title": "Připoj se – Hledáme tebe",
-      "description": "Chceš dělat věci, na kterých záleží? Přidej se k nám na Arabské.",
+      "title": "Připoj se – Hledáme právě tebe",
+      "description": "Chceš dělat věci, na kterých opravdu záleží? Přidej se k nám na Arabské.",
       "og_title": "Připoj se | Youth Arabská",
-      "og_description": "Dej nám vědět, kdo jsi a proč to chceš zkusit."
+      "og_description": "Napiš nám, kdo jsi a co bys chtěl společně s námi rozjet."
     }
   },
   "hero": {
     "badge": "Studentská komunita · Gymnázium, Praha 6, Arabská 14",
     "title_1": "Připoj se k lidem,",
     "title_2": "kteří to myslí vážně",
-    "description": "Youth Arabská nejsme jen další školní klub. Jsme místo, kde se potkávají zajímaví lidé, vznikají reálné projekty a kde si budujete sítě kontaktů na celý život. Pořádáme akce, workshopy a setkání s lidmi z byznysu, vědy i veřejného sektoru.",
+    "description": "Youth Arabská není jen další školní klub. Jsme prostor, kde se potkávají aktivní studenti, vznikají reálné projekty a kde si vybuduješ kontakty na celý život. Pořádáme akce, workshopy a setkání s osobnostmi z byznysu, vědy i veřejného sektoru.",
     "cta_primary": "Objev Youth Horizon",
     "cta_secondary": "Napiš nám"
   },
   "philosophy": {
-    "header_title": "Kdo jsme a co nás žene",
-    "header_subtitle": "Nejsme organizace z nástěnky. Jsme komunita, která věří, že studenti mají co říct — a že to má smysl říkat nahlas.",
+    "header_title": "Kdo jsme a co nás žene dopředu",
+    "header_subtitle": "Nejsme spolek z nástěnky. Jsme komunita, která věří, že studenti mají co říct – a že má smysl to říkat nahlas.",
     "sections": {
       "who": {
         "title": "Kdo jsme?",
-        "text": "Skupina studentů Arabské, kteří nechtějí jen sedět ve třídě. Chceme propojovat lidi, testovat nápady a budovat komunitu, kde každý může najít svoje místo."
+        "text": "Skupina studentů z Arabské, kteří nechtějí jen pasivně sedět v lavicích. Propojujeme lidi, zkoušíme nové nápady a budujeme komunitu, kde si každý může najít své místo."
       },
       "what": {
         "title": "Co děláme?",
-        "text": "Pořádáme debaty, workshopy a projekty jako je Youth Horizon. Propojujeme školu s reálnou praxí a dáváme studentům šanci mluvit s lidmi, kteří v něčem excelují."
+        "text": "Pořádáme diskuse, workshopy a projekty, jako je veletrh Youth Horizon. Propojujeme školu s praxí a dáváme studentům příležitost mluvit s lidmi, kteří ve svých oborech něco dokázali."
       },
       "mission": {
         "title": "Proč to děláme?",
-        "text": "Protože čekání na to, až přijde příležitost, nestačí. Budoucnost si musíš vytvořit sám — a my ti k tomu chceme dát prostředí, kontakty a komunitu, která to chápe."
+        "text": "Protože čekat, až příležitost spadne z nebe, nestačí. Budoucnost si musíš vytvořit sám – a my ti k tomu chceme dát zázemí, kontakty a komunitu, která tě v tom podpoří."
       }
     }
   },
   "events": {
     "header_title": "Co se u nás děje",
-    "header_subtitle": "Projekty a akce, které mají za sebou reálné lidi, reálnou práci a reálné výsledky.",
+    "header_subtitle": "Projekty a akce, za kterými stojí konkrétní lidé, poctivá práce a hmatatelné výsledky.",
     "status_done": "Proběhlo",
     "view_detail": "Chci vědět víc",
     "items": {
       "horizon_2025": {
         "date": "Září 2025",
         "title": "Veletrh Youth Horizon 2025",
-        "desc": "První ročník veletrhu příležitostí na Arabské — stovky studentů, desítky organizací a jeden den plný reálných konverzací o budoucnosti."
+        "desc": "První ročník veletrhu příležitostí na Arabské – stovky studentů, desítky organizací a jeden den plný otevřených rozhovorů o budoucnosti."
       },
       "beyond_the_bell": {
         "date": "Únor 2026",
         "title": "Beyond The Bell",
-        "desc": "Setkání se studenty pražských vysokých škol, kteří prošli stejnou cestou jako ty. Přišli zpátky, aby ti řekli, jak to na fakultách doopravdy chodí."
+        "desc": "Setkání se studenty pražských vysokých škol, kteří prošli stejnou cestou. Vrátili se zpět na Arabskou, aby ti bez obalu řekli, jak to na fakultách doopravdy chodí."
       }
     }
   },
   "event_detail": {
-    "not_found": "Tuhle akci jsme nenašli",
+    "not_found": "Tuto akci jsme nenašli",
     "back_to_events": "← Zpátky na akce",
     "about_title": "O akci",
-    "about_text_1": "Tahle akce je součástí toho, čím Youth Arabská je. Propojili jsme studenty s inspirativními lidmi a vytvořili prostor pro sdílení zkušeností a stavění vztahů.",
-    "about_text_2": "Více info, fotky a detailní popis programu přidáme brzy.",
+    "about_text_1": "Tato akce přesně vystihuje podstatu Youth Arabské. Propojili jsme studenty s inspirativními osobnostmi a vytvořili prostor pro sdílení zkušeností i navazování nových kontaktů.",
+    "about_text_2": "Další informace, fotografie a podrobný program doplníme již brzy.",
     "gallery_title": "Fotky z akce",
-    "gallery_placeholder": "Fotky z této akce přidáme brzy",
-    "cta_title": "Nechceš to příště zažít živě?",
-    "cta_text": "Sleduj nás na Instagramu, ať ti neuteče žádná akce",
+    "gallery_placeholder": "Fotografie z této akce přidáme již brzy",
+    "cta_title": "Chceš to příště zažít naživo?",
+    "cta_text": "Sleduj nás na Instagramu, ať ti neuteče žádná další akce",
     "cta_button": "Sledovat na Instagramu",
     "cta_button_mobile": "Instagram",
     "close_gallery": "Zavřít",
@@ -115,17 +115,17 @@
     "badge": "Co říkají studenti",
     "title_1": "Slova od těch,",
     "title_2": "kteří u toho byli",
-    "subtitle": "Přímá řeč od lidí, kteří to zažili na vlastní kůži",
-    "cta_text": "Chceš být příště taky součástí?",
+    "subtitle": "Přímá zkušenost lidí, kteří to zažili na vlastní kůži",
+    "cta_text": "Chceš být příště také u toho?",
     "cta_button": "Sleduj nás na Instagramu",
     "items": {
       "student_1": {
-        "quote": "Youth Arabská mi dala pocit, že ve škole se dá dělat i něco smysluplného. Konečně jsem potkal lidi, kteří to myslí stejně vážně jako já.",
-        "author": "Student Youth Arabské",
+        "quote": "Youth Arabská mi ukázala, že na střední se dá dělat i něco se skutečným dopadem. Konečně jsem potkal lidi, kteří to berou stejně vážně jako já.",
+        "author": "Student gymnázia",
         "role": "Gymnázium Arabská"
       },
       "student_2": {
-        "quote": "Na Youth Horizon jsem za jeden den potkal víc zajímavých lidí než za celý rok. A pár kontaktů mi pak reálně pomohlo rozhodnout se, na co jít.",
+        "quote": "Na Youth Horizon jsem za jediný den potkal víc inspirativních lidí než za celý rok. A pár kontaktů mi pomohlo ujasnit si, kam chci po maturitě směřovat.",
         "author": "Člen komunity",
         "role": "Gymnázium Arabská"
       }
@@ -133,11 +133,11 @@
   },
   "photogrid": {
     "header_title": "Jak to u nás vypadá",
-    "header_subtitle": "Pár momentek z akcí, které jsme dali dohromady",
+    "header_subtitle": "Momentky z akcí, které jsme společně uspořádali",
     "photos": {
       "horizon_1": {
-        "alt": "Youth Horizon – registrace",
-        "description": "Kdokoliv se mohl přijít podívat na Youth Horizon"
+        "alt": "Youth Horizon – registrace účastníků",
+        "description": "Atmosféra při vstupu na veletrh Youth Horizon"
       },
       "horizon_2": {
         "alt": "Youth Horizon – diskuse s hosty",
@@ -145,25 +145,25 @@
       },
       "horizon_3": {
         "alt": "Youth Horizon – stánky a aktivity",
-        "description": "Každý si přišel na své — od vědy přes byznys až po umění"
+        "description": "Od vědy a technologií přes byznys až po veřejný život"
       },
       "horizon_4": {
         "alt": "Youth Horizon – organizátoři",
-        "description": "Adam a Lujza — lidé, kteří Youth Horizon postavili od nuly"
+        "description": "Adam a Lujza – lidé, kteří Youth Horizon postavili od základů"
       }
     }
   },
   "alliance": {
     "badge": "Přímý kontakt",
     "title": "Chceš se přidat?",
-    "description": "Hledáme lidi, kteří chtějí něco dělat — ne jen být součástí. Věříme na přímou komunikaci bez anonymních formulářů. Napiš e-mail přímo Adamovi nebo Lujze a domluvíme se.",
+    "description": "Hledáme lidi, kteří chtějí tvořit, nejen přihlížet. Věříme na otevřenou komunikaci bez zbytečných formulářů. Napiš e-mail přímo Adamovi nebo Lujze a domluvíme se.",
     "labels": {
       "headquarters": "Kde nás najdeš",
       "communication": "Kontakty na organizátory"
     }
   },
   "footer": {
-    "description": "Studentská komunita propojující aktivní lidi ze všech oborů. Děláme školu místem, kde se dějí věci.",
+    "description": "Studentská komunita propojující aktivní lidi napříč obory. Děláme z Arabské místo, kde se otevírají nové možnosti.",
     "navigation": "Odkazy",
     "institutions": "Instituce",
     "copyright": "Všechna práva vyhrazena."
