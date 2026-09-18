@@ -5,7 +5,7 @@
   <title>Youth Arabská</title>
   <!-- GitHub Pages SPA Routing Fix (rafgraph/spa-github-pages) -->
   <script>
-    var segmentCount = 1;
+    var segmentCount = window.location.hostname.endsWith('.github.io') ? 1 : 0;
     var l = window.location;
     sessionStorage.redirect = l.href;
     l.replace(

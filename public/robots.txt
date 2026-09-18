@@ -1,11 +1,11 @@
 # Robots.txt – Youth Arabská | Gymnázium Arabská 14
-# https://gyarab.github.io/YouthArabska/
+# https://youth.gyarab.cz/
 
 User-agent: *
-Allow: /YouthArabska/
+Allow: /
 
 # Sitemap
-Sitemap: https://gyarab.github.io/YouthArabska/sitemap.xml
+Sitemap: https://youth.gyarab.cz/sitemap.xml
 
 # Crawl-delay for courtesy
 Crawl-delay: 5

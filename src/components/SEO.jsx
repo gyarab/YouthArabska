@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 
-const BASE_URL = 'https://gyarab.github.io/YouthArabska'
+const BASE_URL = 'https://youth.gyarab.cz'
 
 export default function SEO({
   title,
